@@ -35,7 +35,7 @@ Once your conda environment is activated, use the following commands to install 
 ### Step Three: Use Jupyter Notebook
 Inside the Jupyter Notebook interface, you can run cells individually or run all cells by selecting Run > Run All Cells from the top menu.
 The first cells in the notebook are for connecting to Neo4j. You must input your Neo4j username and password to access the database, and you must be connected to the GT VPN. For more information on both of these, view the README in backend. The first cells allow you to get metrics on the dev database. Scroll to Query 1 for the first major query. This query ranks the outside institutions GT authors collaborate with the most, and includes the ability to create a graph. Query 2 ranks the GT authors who have worked with the most outside collaborators. Query 3 tracks the institutions GT authors move between the most. Query 4 tracks the authors with the most works.
-![query1](https://github.gatech.edu/storage/user/59425/files/9b6a5269-376e-4140-a835-22ab2edc3448)
+![query1](../images/query1.png)
 
 ## Neo4j Bloom Graph Visualizations
 ### Step One: Connect to PACE OpenOnDemand
@@ -64,7 +64,7 @@ order by num desc
 return a, collabs
 limit 10
 ```
-<img width="1361" alt="Graph Screenshot" src="https://github.gatech.edu/storage/user/59425/files/7ec216f3-bd19-41c0-afa5-8f376770fe39">
+<img width="1361" alt="Graph Screenshot" src="../images/bloom.png">
 
 ### Top 10 Outside Institutions Who Collaborate With the Most GT Authors
 This query is a reverse of the previous query. It matches the top 10 institutons with the most COLLABORATED_WITH relationships with GT authors (as described above). In the example graph, nodes with the GT label are displayed in purple, and nodes with just the Author label are displayed in yellow. It is also important to note the 10,000 node limit in Neo4j bloom, which prevents the full results of the query from being displayed.
@@ -76,9 +76,9 @@ order by num desc
 return a, collabs
 limit 10
 ```
- <img width="540" alt="graph" src="https://github.gatech.edu/storage/user/59425/files/77fb542c-b0a7-4c83-bddb-d947fa1c5721">
+ <img width="540" alt="graph" src="../images/large_graph.png">
  
 ### Using GDS (Graph Data Science) 
 Note that you can change the number of nodes displayed on the screen in settings. On the left side of the screen, you will see a vertical bar with 4 icons. The bottom icon is for GDS. Click on the icon, then "Add Algorithm." Select "Page Rank Centrality," then settings. Change the orientation from Natural to Undirected. Then click apply algorithm. You can click "Size Scaling" and "Color Gradiant" to have the changes reflected in the graph visually. For example, if you select "Size Scaling," then the nodes with the most connections will be the largest. GDS also gives other algorithms which may be useful. Page Rank will indicate which nodes are more important based on the number of relationships a node has. For example, nodes with more relationships will be displayed as larger when using "Size Scaling."
 
-<img width="1359" alt="Graph screenshot with page rank" src="https://github.gatech.edu/storage/user/59425/files/b086d44d-940e-4788-925a-4361bb9a8e8a">
+<img width="1359" alt="Graph screenshot with page rank" src="../images/gds.png">
