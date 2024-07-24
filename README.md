@@ -15,9 +15,9 @@ In order to connect to the database, the code makes use of the GraphDatabase imp
 
 ## Sample Outputs
 Use cases sample outputs include the following:
-![query1](https://github.gatech.edu/storage/user/59425/files/781259f7-a1df-43f5-ad35-479d944b59ec)
-<img width="950" alt="query1table" src="https://github.gatech.edu/storage/user/59425/files/3533c46f-81fe-44f8-9be3-92775f47886a">
-<img width="526" alt="top10_gt_authors_who_collaborate_with_outside_authors" src="images/query1.png">
+![query1](images/query1.png)
+<img width="950" alt="query1table" src="images/query1table.png">
+<img width="526" alt="top10_gt_authors_who_collaborate_with_outside_authors" src="images/graph.png">
 
 
 # Viewing the Code Documentation
