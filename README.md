@@ -1,4 +1,4 @@
-# Neo4j-Summer2023
+# Neo4j-Research Graph
 
 # Introduction
 This project makes use of Python to directly connect to a Neo4j database and upload information from the OpenAlex api. <br>
