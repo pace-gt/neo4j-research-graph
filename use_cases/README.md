@@ -64,7 +64,7 @@ order by num desc
 return a, collabs
 limit 10
 ```
-<img width="1361" alt="Graph Screenshot" src="../images/bloom.png">
+<img width="1361" alt="Graph Screenshot" src="../images/7ec216f3-bd19-41c0-afa5-8f376770fe39.png">
 
 ### Top 10 Outside Institutions Who Collaborate With the Most GT Authors
 This query is a reverse of the previous query. It matches the top 10 institutons with the most COLLABORATED_WITH relationships with GT authors (as described above). In the example graph, nodes with the GT label are displayed in purple, and nodes with just the Author label are displayed in yellow. It is also important to note the 10,000 node limit in Neo4j bloom, which prevents the full results of the query from being displayed.
@@ -81,4 +81,4 @@ limit 10
 ### Using GDS (Graph Data Science) 
 Note that you can change the number of nodes displayed on the screen in settings. On the left side of the screen, you will see a vertical bar with 4 icons. The bottom icon is for GDS. Click on the icon, then "Add Algorithm." Select "Page Rank Centrality," then settings. Change the orientation from Natural to Undirected. Then click apply algorithm. You can click "Size Scaling" and "Color Gradiant" to have the changes reflected in the graph visually. For example, if you select "Size Scaling," then the nodes with the most connections will be the largest. GDS also gives other algorithms which may be useful. Page Rank will indicate which nodes are more important based on the number of relationships a node has. For example, nodes with more relationships will be displayed as larger when using "Size Scaling."
 
-<img width="1359" alt="Graph screenshot with page rank" src="../images/gds.png">
+<img width="1359" alt="Graph screenshot with page rank" src="../images/b086d44d-940e-4788-925a-4361bb9a8e8a.png">
