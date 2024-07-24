@@ -1,0 +1,213 @@
+<mxfile host="app.diagrams.net" modified="2023-11-28T15:35:54.725Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="Dr36adh3MK4B6gXwvhVp" version="22.1.4" type="device">
+  <diagram name="Page-1" id="5Bg-f1kmcvoNU_wfA3u_">
+    <mxGraphModel dx="9640" dy="6190" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-1" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Neo4j&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="40" width="330" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-2" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Author&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="WXtQ-g56bVqcp8WNq29k-1" vertex="1">
+          <mxGeometry x="55" y="45" width="220" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-3" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;GT&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WXtQ-g56bVqcp8WNq29k-1" vertex="1">
+          <mxGeometry x="160" y="170" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WXtQ-g56bVqcp8WNq29k-1" target="WXtQ-g56bVqcp8WNq29k-4" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="210" as="sourcePoint" />
+            <mxPoint x="270" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-6" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Download OpenAlex&lt;br&gt;author and DOI&lt;br&gt;information from&lt;br&gt;database&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WXtQ-g56bVqcp8WNq29k-5" vertex="1" connectable="0">
+          <mxGeometry x="0.1043" y="-2" relative="1" as="geometry">
+            <mxPoint y="64" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-4" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;CSV containing OpenAlex authors working at GT without ORCIDs and their DOIs&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="470" y="165" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-7" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Scopus&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="390" width="330" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-8" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;GT Author Information&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" parent="WXtQ-g56bVqcp8WNq29k-7" vertex="1">
+          <mxGeometry x="112.5" y="105" width="105" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-15" target="WXtQ-g56bVqcp8WNq29k-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="420" as="targetPoint" />
+            <mxPoint x="710" y="520" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="710" y="511" />
+              <mxPoint x="710" y="430" />
+              <mxPoint x="590" y="430" />
+              <mxPoint x="590" y="456" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-14" value="API Calls to add DOIs to csv" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WXtQ-g56bVqcp8WNq29k-13" vertex="1" connectable="0">
+          <mxGeometry x="0.1329" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-11" target="WXtQ-g56bVqcp8WNq29k-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-11" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;CSV containing author information from Scopus for authors connected to GT&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="390" y="480" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-15" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Make calls to Scopus API to expand CSV to contain DOI information&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="482.5" width="180" height="117.5" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-4" target="WXtQ-g56bVqcp8WNq29k-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="210" as="sourcePoint" />
+            <mxPoint x="860" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-15" target="WXtQ-g56bVqcp8WNq29k-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="500" as="sourcePoint" />
+            <mxPoint x="880" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-20" target="WXtQ-g56bVqcp8WNq29k-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-20" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Match authors from each CSV that have a DOI in common&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="820" y="310" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-21" target="WXtQ-g56bVqcp8WNq29k-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-21" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Compare authors with a common DOI and match authors that also share a last name&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="940" y="180" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-24" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;New ORCIDs&lt;br&gt;retrieved from&lt;br&gt;Scopus&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="980" y="370" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-27" value="CSV containing GT information&lt;br&gt;(GTID, GT username, email, etc.)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="630" y="940" width="190" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-24" target="WXtQ-g56bVqcp8WNq29k-3" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1130" y="450" as="sourcePoint" />
+            <mxPoint x="750" y="80" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1180" y="435" />
+              <mxPoint x="1180" y="130" />
+              <mxPoint x="750" y="110" />
+              <mxPoint x="480" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-33" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Update with new ORCIDs&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WXtQ-g56bVqcp8WNq29k-32" vertex="1" connectable="0">
+          <mxGeometry x="-0.6253" y="4" relative="1" as="geometry">
+            <mxPoint x="4" y="37" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-39" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Neo4j&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="940" width="330" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-40" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Author&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="WXtQ-g56bVqcp8WNq29k-39" vertex="1">
+          <mxGeometry x="55" y="45" width="220" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-41" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;GT&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WXtQ-g56bVqcp8WNq29k-39" vertex="1">
+          <mxGeometry x="160" y="170" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-44" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-41" target="WXtQ-g56bVqcp8WNq29k-27" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="1200" as="sourcePoint" />
+            <mxPoint x="750" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-45" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Match based on ORCID&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WXtQ-g56bVqcp8WNq29k-44" vertex="1" connectable="0">
+          <mxGeometry x="-0.1225" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-46" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-27" target="WXtQ-g56bVqcp8WNq29k-41" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="750" y="1280" as="sourcePoint" />
+            <mxPoint x="800" y="1230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="725" y="1200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-47" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Update with GT information&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WXtQ-g56bVqcp8WNq29k-46" vertex="1" connectable="0">
+          <mxGeometry x="-0.6726" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-48" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Neo4j&lt;/font&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="170" y="1510" width="330" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-49" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Author&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" parent="WXtQ-g56bVqcp8WNq29k-48" vertex="1">
+          <mxGeometry x="55" y="45" width="220" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-50" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;GT&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="WXtQ-g56bVqcp8WNq29k-48" vertex="1">
+          <mxGeometry x="160" y="170" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-53" target="WXtQ-g56bVqcp8WNq29k-56" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-58" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Use LDAP to confirm if there are actually&lt;br&gt;multiple authors or if the entry&lt;br&gt;is duplicated&lt;br&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WXtQ-g56bVqcp8WNq29k-57" vertex="1" connectable="0">
+          <mxGeometry x="0.1365" relative="1" as="geometry">
+            <mxPoint y="85" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-53" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;List of current GT authors with multiple entries&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="595" y="1620" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-54" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-50" target="WXtQ-g56bVqcp8WNq29k-53" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="1710" as="sourcePoint" />
+            <mxPoint x="570" y="1660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-56" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Georgia Tech LDAP&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="890" y="1615" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-60" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WXtQ-g56bVqcp8WNq29k-56" target="WXtQ-g56bVqcp8WNq29k-50" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="930" y="1570" as="sourcePoint" />
+            <mxPoint x="680" y="1490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="980" y="1550" />
+              <mxPoint x="670" y="1580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-61" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Merge duplicated Author nodes&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WXtQ-g56bVqcp8WNq29k-60" vertex="1" connectable="0">
+          <mxGeometry x="-0.0049" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" target="WXtQ-g56bVqcp8WNq29k-11" edge="1" source="WXtQ-g56bVqcp8WNq29k-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="520" as="sourcePoint" />
+            <mxPoint x="510" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WXtQ-g56bVqcp8WNq29k-10" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Download&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="WXtQ-g56bVqcp8WNq29k-9" vertex="1" connectable="0">
+          <mxGeometry x="0.1232" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dUN8TtuS3Wz2aGl6lSl3-1" value="" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="320" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dUN8TtuS3Wz2aGl6lSl3-2" value="" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1980" y="280" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dUN8TtuS3Wz2aGl6lSl3-3" value="" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="-300" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="dUN8TtuS3Wz2aGl6lSl3-4" value="" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="2050" width="60" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

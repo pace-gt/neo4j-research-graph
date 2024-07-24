@@ -1,0 +1,71 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Class Documentation}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Author.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Author Class Reference}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Detailed Description}{3}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Member Function Documentation}{4}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}check\_no\_lost\_collabs()}{4}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}get\_max\_batch\_number()}{4}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}remove\_duplicate\_authors\_and\_collabs()}{4}{subsubsection.2.1.2.3}%
+\contentsline {subsubsection}{\numberline {2.1.2.4}run\_method()}{5}{subsubsection.2.1.2.4}%
+\contentsline {subsubsection}{\numberline {2.1.2.5}test\_no\_duplicates\_in\_author\_and\_collab()}{5}{subsubsection.2.1.2.5}%
+\contentsline {subsubsection}{\numberline {2.1.2.6}upload\_collabs\_parallel()}{6}{subsubsection.2.1.2.6}%
+\contentsline {subsubsection}{\numberline {2.1.2.7}upload\_current\_gt\_authors()}{6}{subsubsection.2.1.2.7}%
+\contentsline {section}{\numberline {2.2}Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base Class Reference}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Detailed Description}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Constructor \& Destructor Documentation}{8}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}\_\_init\_\_()}{8}{subsubsection.2.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.3}Member Function Documentation}{8}{subsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.3.1}run\_command()}{8}{subsubsection.2.2.3.1}%
+\contentsline {section}{\numberline {2.3}Download.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Download Class Reference}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Detailed Description}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Constructor \& Destructor Documentation}{9}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}\_\_init\_\_()}{9}{subsubsection.2.3.2.1}%
+\contentsline {subsection}{\numberline {2.3.3}Member Function Documentation}{10}{subsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}add\_author()}{10}{subsubsection.2.3.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.3.2}add\_work()}{10}{subsubsection.2.3.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3.3}close\_files()}{10}{subsubsection.2.3.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.4}create\_files()}{11}{subsubsection.2.3.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.3.5}download\_based\_on\_last\_known()}{11}{subsubsection.2.3.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.3.6}download\_based\_on\_works()}{12}{subsubsection.2.3.3.6}%
+\contentsline {section}{\numberline {2.4}File.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}File Class Reference}{12}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Detailed Description}{12}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Member Function Documentation}{13}{subsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.1}check\_files()}{13}{subsubsection.2.4.2.1}%
+\contentsline {subsubsection}{\numberline {2.4.2.2}check\_for\_duplicates()}{13}{subsubsection.2.4.2.2}%
+\contentsline {subsubsection}{\numberline {2.4.2.3}check\_num\_in\_json()}{14}{subsubsection.2.4.2.3}%
+\contentsline {subsubsection}{\numberline {2.4.2.4}chunk\_json()}{14}{subsubsection.2.4.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.2.5}close\_file()}{15}{subsubsection.2.4.2.5}%
+\contentsline {subsubsection}{\numberline {2.4.2.6}compare\_to\_edit()}{15}{subsubsection.2.4.2.6}%
+\contentsline {subsubsection}{\numberline {2.4.2.7}create\_json\_file()}{15}{subsubsection.2.4.2.7}%
+\contentsline {subsubsection}{\numberline {2.4.2.8}get\_max\_batch\_number\_collabs()}{16}{subsubsection.2.4.2.8}%
+\contentsline {subsubsection}{\numberline {2.4.2.9}get\_max\_batch\_number\_works()}{16}{subsubsection.2.4.2.9}%
+\contentsline {subsubsection}{\numberline {2.4.2.10}open\_file()}{16}{subsubsection.2.4.2.10}%
+\contentsline {subsubsection}{\numberline {2.4.2.11}run\_method()}{17}{subsubsection.2.4.2.11}%
+\contentsline {subsubsection}{\numberline {2.4.2.12}write\_data\_to\_file()}{17}{subsubsection.2.4.2.12}%
+\contentsline {section}{\numberline {2.5}Institution.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Institution Class Reference}{17}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Detailed Description}{18}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Member Function Documentation}{18}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}remove\_duplicate\_institutions()}{18}{subsubsection.2.5.2.1}%
+\contentsline {subsubsection}{\numberline {2.5.2.2}run\_method()}{18}{subsubsection.2.5.2.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.3}upload\_institutions()}{19}{subsubsection.2.5.2.3}%
+\contentsline {section}{\numberline {2.6}Slurm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Job.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Slurm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Job Class Reference}{19}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Detailed Description}{20}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Constructor \& Destructor Documentation}{20}{subsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.2.1}\_\_init\_\_()}{20}{subsubsection.2.6.2.1}%
+\contentsline {subsection}{\numberline {2.6.3}Member Function Documentation}{21}{subsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.3.1}download\_files()}{21}{subsubsection.2.6.3.1}%
+\contentsline {subsubsection}{\numberline {2.6.3.2}print\_nums\_in\_file()}{21}{subsubsection.2.6.3.2}%
+\contentsline {subsubsection}{\numberline {2.6.3.3}remove\_duplicates()}{21}{subsubsection.2.6.3.3}%
+\contentsline {subsubsection}{\numberline {2.6.3.4}run\_tests\_on\_cleaning()}{22}{subsubsection.2.6.3.4}%
+\contentsline {subsubsection}{\numberline {2.6.3.5}upload\_to\_neo4j()}{22}{subsubsection.2.6.3.5}%
+\contentsline {section}{\numberline {2.7}Work.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Work Class Reference}{23}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Detailed Description}{23}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Member Function Documentation}{24}{subsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.2.1}create\_authored\_relationship()}{24}{subsubsection.2.7.2.1}%
+\contentsline {subsubsection}{\numberline {2.7.2.2}get\_max\_batch\_number()}{24}{subsubsection.2.7.2.2}%
+\contentsline {subsubsection}{\numberline {2.7.2.3}remove\_duplicate\_works()}{25}{subsubsection.2.7.2.3}%
+\contentsline {subsubsection}{\numberline {2.7.2.4}run\_method()}{25}{subsubsection.2.7.2.4}%
+\contentsline {subsubsection}{\numberline {2.7.2.5}upload\_works\_parallel()}{25}{subsubsection.2.7.2.5}%
+\contentsline {chapter}{Index}{27}{section*.11}%

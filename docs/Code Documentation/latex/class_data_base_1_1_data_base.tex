@@ -1,0 +1,109 @@
+\doxysection{Data\+Base.\+Data\+Base Class Reference}
+\hypertarget{class_data_base_1_1_data_base}{}\label{class_data_base_1_1_data_base}\index{DataBase.DataBase@{DataBase.DataBase}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_data_base_1_1_data_base_a4dd2b74df06cf8e0dee6c86726c29cc3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, url, username, password, database)
+\item 
+\mbox{\hyperlink{class_data_base_1_1_data_base_ab05df23e8b015e64a9c75a58a7081691}{run\+\_\+command}} (self, command, additional\+\_\+data=None)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_data_base_1_1_data_base_aed2ff381a767cf581a259768fee224f8}\label{class_data_base_1_1_data_base_aed2ff381a767cf581a259768fee224f8} 
+{\bfseries url}
+\item 
+\Hypertarget{class_data_base_1_1_data_base_acfae692feaf8067d4d617686cb489b8f}\label{class_data_base_1_1_data_base_acfae692feaf8067d4d617686cb489b8f} 
+{\bfseries username}
+\item 
+\Hypertarget{class_data_base_1_1_data_base_aac75e79f4aa60b4339b143c52fb28287}\label{class_data_base_1_1_data_base_aac75e79f4aa60b4339b143c52fb28287} 
+{\bfseries password}
+\item 
+\Hypertarget{class_data_base_1_1_data_base_a4d652993f5e8a68a09d9f63c3b887266}\label{class_data_base_1_1_data_base_a4d652993f5e8a68a09d9f63c3b887266} 
+{\bfseries database}
+\item 
+\Hypertarget{class_data_base_1_1_data_base_a74cf70c6c6c038125be3bf84591062b2}\label{class_data_base_1_1_data_base_a74cf70c6c6c038125be3bf84591062b2} 
+{\bfseries driver}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class which represents a connection to a Neo4j database
+
+Imports
+-------
+GraphDatabase from neo4j
+
+Attributes
+----------
+url: str
+    URL of the database to establish a connection with
+username: str
+    Username of Neo4j user
+password: str
+    Password of Neo4j user
+database: str
+    Specific database to upload to
+driver: GraphDatabase.driver
+    Established connection to Neo4j based on above attributes
+
+Methods
+-------
+run_command(command, additional_data=None):
+    Runs a given cypher command on the database
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_data_base_1_1_data_base_a4dd2b74df06cf8e0dee6c86726c29cc3}\label{class_data_base_1_1_data_base_a4dd2b74df06cf8e0dee6c86726c29cc3} 
+\index{DataBase.DataBase@{DataBase.DataBase}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!DataBase.DataBase@{DataBase.DataBase}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily Data\+Base.\+Data\+Base.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{url,  }\item[{}]{username,  }\item[{}]{password,  }\item[{}]{database }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructs attributes for a DataBase object and establishes a driver
+
+Parameters
+----------
+url: str
+    URL of the database to connect to
+username: str
+    Username of Neo4j user
+password: str
+    Password of Neo4j user
+database: str
+    Specific database to connect to
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_data_base_1_1_data_base_ab05df23e8b015e64a9c75a58a7081691}\label{class_data_base_1_1_data_base_ab05df23e8b015e64a9c75a58a7081691} 
+\index{DataBase.DataBase@{DataBase.DataBase}!run\_command@{run\_command}}
+\index{run\_command@{run\_command}!DataBase.DataBase@{DataBase.DataBase}}
+\doxysubsubsection{\texorpdfstring{run\_command()}{run\_command()}}
+{\footnotesize\ttfamily Data\+Base.\+Data\+Base.\+run\+\_\+command (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{command,  }\item[{}]{additional\+\_\+data = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Runs a given cypher command on the database
+
+Requirements
+------------
+None
+
+Parameters
+----------
+command: str
+    Cypher command to run on the Neo4j database
+additional_data: list, optional
+    Additional data to give to Neo4j
+    Often a list of nodes to add
+    Default value: None
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Base.\+py\end{DoxyCompactItemize}

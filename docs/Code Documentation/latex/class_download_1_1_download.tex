@@ -1,0 +1,227 @@
+\doxysection{Download.\+Download Class Reference}
+\hypertarget{class_download_1_1_download}{}\label{class_download_1_1_download}\index{Download.Download@{Download.Download}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_download_1_1_download_ae0edbd1b38ea39d79c1c6cb7f72d8cb1}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+\mbox{\hyperlink{class_download_1_1_download_aaad77f48d29fc6cd5168c81249880ecb}{download\+\_\+based\+\_\+on\+\_\+last\+\_\+known}} (self)
+\item 
+\mbox{\hyperlink{class_download_1_1_download_ad4dd16b44535e547c153fe50610803c7}{download\+\_\+based\+\_\+on\+\_\+works}} (self)
+\item 
+\mbox{\hyperlink{class_download_1_1_download_ada411bcf41424bc41d195aba0a122f6b}{add\+\_\+author}} (self, id)
+\item 
+\mbox{\hyperlink{class_download_1_1_download_a2daa960a5d5423afa589b6032d010876}{add\+\_\+work}} (self, id)
+\item 
+\mbox{\hyperlink{class_download_1_1_download_a08bc6018d155fdd4d7207b27a3a77900}{create\+\_\+files}} (self)
+\item 
+\mbox{\hyperlink{class_download_1_1_download_a867bb21aba878f302c8fa46d9efa3eaa}{close\+\_\+files}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_download_1_1_download_ac322cd128a378bd635a873525ddc9eea}\label{class_download_1_1_download_ac322cd128a378bd635a873525ddc9eea} 
+{\bfseries added\+\_\+institutes}
+\item 
+\Hypertarget{class_download_1_1_download_a04d36f99ba982b12ea2268e65c5e5ae9}\label{class_download_1_1_download_a04d36f99ba982b12ea2268e65c5e5ae9} 
+{\bfseries added\+\_\+works}
+\item 
+\Hypertarget{class_download_1_1_download_a511c7f9f75e3775fd54721e8ac45372a}\label{class_download_1_1_download_a511c7f9f75e3775fd54721e8ac45372a} 
+{\bfseries missed\+\_\+authors}
+\item 
+\Hypertarget{class_download_1_1_download_a70a4cecd6d1ed3d75e8fa05e03f9d767}\label{class_download_1_1_download_a70a4cecd6d1ed3d75e8fa05e03f9d767} 
+{\bfseries missed\+\_\+works}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class for an openalex download
+
+Imports
+-------
+json
+requests
+os
+sys
+
+Methods
+-------
+download_based_on_las_known():
+    Download all authors into json files based on last known institution as Georgia Tech
+download_based_on_works():
+    Filters openalex works based on GT and collects necessary information
+add_author(id):
+    Adds a single author and their relevant information
+add_work(id):
+    Adds a single work and relevant information
+create_files():
+    Creates 4 json files to collect information
+close_files():
+    Closes the files so that they're in proper json format
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_download_1_1_download_ae0edbd1b38ea39d79c1c6cb7f72d8cb1}\label{class_download_1_1_download_ae0edbd1b38ea39d79c1c6cb7f72d8cb1} 
+\index{Download.Download@{Download.Download}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Download.Download@{Download.Download}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily Download.\+Download.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructs attributes for a SlurmJob object
+
+Parameters
+----------
+None
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_download_1_1_download_ada411bcf41424bc41d195aba0a122f6b}\label{class_download_1_1_download_ada411bcf41424bc41d195aba0a122f6b} 
+\index{Download.Download@{Download.Download}!add\_author@{add\_author}}
+\index{add\_author@{add\_author}!Download.Download@{Download.Download}}
+\doxysubsubsection{\texorpdfstring{add\_author()}{add\_author()}}
+{\footnotesize\ttfamily Download.\+Download.\+add\+\_\+author (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Adds a single author and their relevant information
+    Puts authors in openalex_author_dump.json
+    Puts their collaborators in openalex_collab_dump.json
+    Puts their institutions in openalex_institution_dump.json
+    Puts their works in openalex_work_dump.json
+
+    Requirements
+    ------------
+    None
+
+    Parameters
+    ----------
+    id: str
+        Openalex id of the author to be added
+
+    Returns
+    -------
+    None
+\end{DoxyVerb}
+ \Hypertarget{class_download_1_1_download_a2daa960a5d5423afa589b6032d010876}\label{class_download_1_1_download_a2daa960a5d5423afa589b6032d010876} 
+\index{Download.Download@{Download.Download}!add\_work@{add\_work}}
+\index{add\_work@{add\_work}!Download.Download@{Download.Download}}
+\doxysubsubsection{\texorpdfstring{add\_work()}{add\_work()}}
+{\footnotesize\ttfamily Download.\+Download.\+add\+\_\+work (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Adds a single work and relevant information
+    Puts all collaborators in openalex_collab_dump.json
+    Puts their institutions in openalex_institution_dump.json
+    Puts their works in openalex_work_dump.json
+
+    Requirements
+    ------------
+    None
+
+    Parameters
+    ----------
+    id: str
+        Openalex id of the work to be added
+
+    Returns
+    -------
+    None
+\end{DoxyVerb}
+ \Hypertarget{class_download_1_1_download_a867bb21aba878f302c8fa46d9efa3eaa}\label{class_download_1_1_download_a867bb21aba878f302c8fa46d9efa3eaa} 
+\index{Download.Download@{Download.Download}!close\_files@{close\_files}}
+\index{close\_files@{close\_files}!Download.Download@{Download.Download}}
+\doxysubsubsection{\texorpdfstring{close\_files()}{close\_files()}}
+{\footnotesize\ttfamily Download.\+Download.\+close\+\_\+files (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Closes the files so that they're in proper json format
+
+Requirements
+------------
+openalex_author_dump.json
+openalex_collab_dump.json
+openalex_institution_dump.json
+openalex_work_dump.json
+
+Parameters
+----------
+None
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_download_1_1_download_a08bc6018d155fdd4d7207b27a3a77900}\label{class_download_1_1_download_a08bc6018d155fdd4d7207b27a3a77900} 
+\index{Download.Download@{Download.Download}!create\_files@{create\_files}}
+\index{create\_files@{create\_files}!Download.Download@{Download.Download}}
+\doxysubsubsection{\texorpdfstring{create\_files()}{create\_files()}}
+{\footnotesize\ttfamily Download.\+Download.\+create\+\_\+files (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Creates 4 json files to collect information
+    openalex_author_dump.json
+    openalex_collab_dump.json
+    openalex_institution_dump.json
+    openalex_work_dump.json
+
+    Requirements
+    ------------
+    None
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    None
+\end{DoxyVerb}
+ \Hypertarget{class_download_1_1_download_aaad77f48d29fc6cd5168c81249880ecb}\label{class_download_1_1_download_aaad77f48d29fc6cd5168c81249880ecb} 
+\index{Download.Download@{Download.Download}!download\_based\_on\_last\_known@{download\_based\_on\_last\_known}}
+\index{download\_based\_on\_last\_known@{download\_based\_on\_last\_known}!Download.Download@{Download.Download}}
+\doxysubsubsection{\texorpdfstring{download\_based\_on\_last\_known()}{download\_based\_on\_last\_known()}}
+{\footnotesize\ttfamily Download.\+Download.\+download\+\_\+based\+\_\+on\+\_\+last\+\_\+known (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Download all authors into json files based on last known institution as Georgia Tech
+    Puts authors in openalex_author_dump.json
+    Puts their collaborators in openalex_collab_dump.json
+    Puts their institutions in openalex_institution_dump.json
+    Puts their works in openalex_work_dump.json
+
+    Requirements
+    ------------
+    None
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    None
+\end{DoxyVerb}
+ \Hypertarget{class_download_1_1_download_ad4dd16b44535e547c153fe50610803c7}\label{class_download_1_1_download_ad4dd16b44535e547c153fe50610803c7} 
+\index{Download.Download@{Download.Download}!download\_based\_on\_works@{download\_based\_on\_works}}
+\index{download\_based\_on\_works@{download\_based\_on\_works}!Download.Download@{Download.Download}}
+\doxysubsubsection{\texorpdfstring{download\_based\_on\_works()}{download\_based\_on\_works()}}
+{\footnotesize\ttfamily Download.\+Download.\+download\+\_\+based\+\_\+on\+\_\+works (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}    Filters openalex works based on GT and collects necessary information
+    Puts all collaborators in openalex_collab_dump.json
+    Puts their institutions in openalex_institution_dump.json
+    Puts their works in openalex_work_dump.json
+
+    Requirements
+    ------------
+    None
+
+    Parameters
+    ----------
+    None
+
+    Returns
+    -------
+    None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Download.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,349 @@
+\doxysection{File.\+File Class Reference}
+\hypertarget{class_file_1_1_file}{}\label{class_file_1_1_file}\index{File.File@{File.File}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_file_1_1_file_a37817f911b090863255a573f672a10a4}{close\+\_\+file}} (file\+\_\+name)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_ae0ee68be90a514a68d4da7522fbcbffd}{chunk\+\_\+json}} (self, file\+\_\+name, chunk\+\_\+size)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_a87c23f75b33ed5114b43162e5918d695}{open\+\_\+file}} (file\+\_\+name)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_aa8e1e38a64036be73eeba95234ecb766}{write\+\_\+data\+\_\+to\+\_\+file}} (file\+\_\+name, data)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_ae0bb8702e076c70d48df05ca0e58894d}{create\+\_\+json\+\_\+file}} (file\+\_\+name, data)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_ab3e69bdf0086ec54c1aff20acdb62086}{check\+\_\+num\+\_\+in\+\_\+json}} (file\+\_\+name)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_a7566579e77aab0804e86deff031d74af}{compare\+\_\+to\+\_\+edit}} (original\+\_\+file, edit\+\_\+file)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_af66291da4b4b7057a3bdd3a4793fbe95}{check\+\_\+for\+\_\+duplicates}} (edit\+\_\+file)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_a4b11083b7cd0de8820e43bdf731f8354}{get\+\_\+max\+\_\+batch\+\_\+number\+\_\+works}} (self, batch\+\_\+size=8000)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_a97cf4fa56966d5cdd3e75be53414a7ff}{get\+\_\+max\+\_\+batch\+\_\+number\+\_\+collabs}} (self, batch\+\_\+size=8000)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_ae0ab59e4f20a74d63c6eefc701678acb}{check\+\_\+files}} (original=True, edit=True)
+\item 
+\mbox{\hyperlink{class_file_1_1_file_a22b868161410a8b43158691e976929c3}{run\+\_\+method}} (arguments)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class to hold various methods relating to files
+
+Imports
+-------
+os
+json
+sys
+
+Methods
+-------
+close_file(file_name):
+    Adds the necessary ending to a given json file once all data has been imported
+chunk_json(filename, chunk_size):
+    Separates the json file into smaller chunks and returns them in the form of a list
+open_file(file_name):
+    Adds the necessary beginning to a new json file before adding the data
+write_data_to_file(file_name, data):
+    Writes each item in a given list to the given json file
+create_json_file(file_name, data):
+    Combines methods to create a new json file with the given data in the correct format.
+check_num_in_json(file_name):
+    Prints the number of items inside a given json file
+compare_to_edit(original_file, edit_file):
+    Ensures all entries in the original json are also in the edited json
+check_for_duplicates(edit_file):
+    Checks for duplicates in the given file
+get_max_batch_number_works(batch_size=8000):
+    Prints length of chunked list for works json
+get_max_batch_number_collabs(batch_size=8000):
+    Prints length of chunked list for the collab json
+check_files(original=True, edit=True):
+    Checks to see if certain files exist within the current directory
+run_method(arguments):
+    Used to run any method in the class to easily access methods in an sbatch file
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_file_1_1_file_ae0ab59e4f20a74d63c6eefc701678acb}\label{class_file_1_1_file_ae0ab59e4f20a74d63c6eefc701678acb} 
+\index{File.File@{File.File}!check\_files@{check\_files}}
+\index{check\_files@{check\_files}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{check\_files()}{check\_files()}}
+{\footnotesize\ttfamily File.\+File.\+check\+\_\+files (\begin{DoxyParamCaption}\item[{}]{original = {\ttfamily True},  }\item[{}]{edit = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks to see if certain files exist within the current directory
+
+Requirements
+------------
+None
+
+Parameters
+----------
+original: boolean, optional
+    If true, then the method will make sure all four original json files are in the current
+    directory
+    Default value: True
+edit: boolean, optional
+    If true, then the method will make sure all four edited json files are in the current
+    directory
+    Default value: True
+
+Returns
+-------
+boolean representing if the specific files were located or not
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_af66291da4b4b7057a3bdd3a4793fbe95}\label{class_file_1_1_file_af66291da4b4b7057a3bdd3a4793fbe95} 
+\index{File.File@{File.File}!check\_for\_duplicates@{check\_for\_duplicates}}
+\index{check\_for\_duplicates@{check\_for\_duplicates}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{check\_for\_duplicates()}{check\_for\_duplicates()}}
+{\footnotesize\ttfamily File.\+File.\+check\+\_\+for\+\_\+duplicates (\begin{DoxyParamCaption}\item[{}]{edit\+\_\+file }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks for duplicates in the given file
+Prints result to output file
+
+Requirements
+------------
+None
+
+Parameters
+----------
+file_name: str
+    Name of file in the current directory to use
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_ab3e69bdf0086ec54c1aff20acdb62086}\label{class_file_1_1_file_ab3e69bdf0086ec54c1aff20acdb62086} 
+\index{File.File@{File.File}!check\_num\_in\_json@{check\_num\_in\_json}}
+\index{check\_num\_in\_json@{check\_num\_in\_json}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{check\_num\_in\_json()}{check\_num\_in\_json()}}
+{\footnotesize\ttfamily File.\+File.\+check\+\_\+num\+\_\+in\+\_\+json (\begin{DoxyParamCaption}\item[{}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints the number of items inside a given json file
+Prints result to output file
+
+Requirements
+------------
+None
+
+Parameters
+----------
+file_name: str
+    Name of file in the current directory to use
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_ae0ee68be90a514a68d4da7522fbcbffd}\label{class_file_1_1_file_ae0ee68be90a514a68d4da7522fbcbffd} 
+\index{File.File@{File.File}!chunk\_json@{chunk\_json}}
+\index{chunk\_json@{chunk\_json}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{chunk\_json()}{chunk\_json()}}
+{\footnotesize\ttfamily File.\+File.\+chunk\+\_\+json (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{file\+\_\+name,  }\item[{}]{chunk\+\_\+size }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Separates the json file into smaller chunks and returns them in the form of a list
+Used to run methods in parallel
+
+Requirements
+------------
+None
+
+Parameters
+----------
+file_name: str
+    Name of file in the current directory to use
+chunk_size: int
+    Nummber of items in each chunk
+
+Returns
+-------
+list of items in the original file separated into chunks of the given size
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_a37817f911b090863255a573f672a10a4}\label{class_file_1_1_file_a37817f911b090863255a573f672a10a4} 
+\index{File.File@{File.File}!close\_file@{close\_file}}
+\index{close\_file@{close\_file}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{close\_file()}{close\_file()}}
+{\footnotesize\ttfamily File.\+File.\+close\+\_\+file (\begin{DoxyParamCaption}\item[{}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds the necessary ending to a given json file once all data has been imported
+
+Requirements
+------------
+None
+
+Parameters
+----------
+file_name: str
+    Name of file in the current directory to use
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_a7566579e77aab0804e86deff031d74af}\label{class_file_1_1_file_a7566579e77aab0804e86deff031d74af} 
+\index{File.File@{File.File}!compare\_to\_edit@{compare\_to\_edit}}
+\index{compare\_to\_edit@{compare\_to\_edit}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{compare\_to\_edit()}{compare\_to\_edit()}}
+{\footnotesize\ttfamily File.\+File.\+compare\+\_\+to\+\_\+edit (\begin{DoxyParamCaption}\item[{}]{original\+\_\+file,  }\item[{}]{edit\+\_\+file }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ensures all entries in the original json are also in the edited json
+Prints result to output file
+
+Requirements
+------------
+None
+
+Parameters
+----------
+original_file: str
+    Name of original file in current directory to use
+edit_file: str
+    Name of edited file in current directory to use
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_ae0bb8702e076c70d48df05ca0e58894d}\label{class_file_1_1_file_ae0bb8702e076c70d48df05ca0e58894d} 
+\index{File.File@{File.File}!create\_json\_file@{create\_json\_file}}
+\index{create\_json\_file@{create\_json\_file}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{create\_json\_file()}{create\_json\_file()}}
+{\footnotesize\ttfamily File.\+File.\+create\+\_\+json\+\_\+file (\begin{DoxyParamCaption}\item[{}]{file\+\_\+name,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Combines methods to create a new json file with the given data in the correct format.
+
+Requirements
+------------
+None
+
+Parameters
+----------
+file_name: str
+    Name of file in the current directory to use
+data:
+    List of data to be written to json file
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_a97cf4fa56966d5cdd3e75be53414a7ff}\label{class_file_1_1_file_a97cf4fa56966d5cdd3e75be53414a7ff} 
+\index{File.File@{File.File}!get\_max\_batch\_number\_collabs@{get\_max\_batch\_number\_collabs}}
+\index{get\_max\_batch\_number\_collabs@{get\_max\_batch\_number\_collabs}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{get\_max\_batch\_number\_collabs()}{get\_max\_batch\_number\_collabs()}}
+{\footnotesize\ttfamily File.\+File.\+get\+\_\+max\+\_\+batch\+\_\+number\+\_\+collabs (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{batch\+\_\+size = {\ttfamily 8000} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints length of chunked list for collabs json
+Use to determine correct size of array for an array job
+
+Requirements
+------------
+openalex_collab_dump_edit.json
+
+Parameters
+----------
+batch_size: int, optional
+    Number of entries to be in each chunk
+    Default value: 8000
+
+Returns
+-------
+Length of the chunked json
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_a4b11083b7cd0de8820e43bdf731f8354}\label{class_file_1_1_file_a4b11083b7cd0de8820e43bdf731f8354} 
+\index{File.File@{File.File}!get\_max\_batch\_number\_works@{get\_max\_batch\_number\_works}}
+\index{get\_max\_batch\_number\_works@{get\_max\_batch\_number\_works}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{get\_max\_batch\_number\_works()}{get\_max\_batch\_number\_works()}}
+{\footnotesize\ttfamily File.\+File.\+get\+\_\+max\+\_\+batch\+\_\+number\+\_\+works (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{batch\+\_\+size = {\ttfamily 8000} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints length of chunked list for works json
+Use to determine correct size of array for an array job
+
+Requirements
+------------
+openalex_work_dump_edit.json
+
+Parameters
+----------
+batch_size: int, optional
+    Number of entries to be in each chunk
+    Default value: 8000
+
+Returns
+-------
+Length of the chunked json
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_a87c23f75b33ed5114b43162e5918d695}\label{class_file_1_1_file_a87c23f75b33ed5114b43162e5918d695} 
+\index{File.File@{File.File}!open\_file@{open\_file}}
+\index{open\_file@{open\_file}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{open\_file()}{open\_file()}}
+{\footnotesize\ttfamily File.\+File.\+open\+\_\+file (\begin{DoxyParamCaption}\item[{}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds the necessary beginning to a new json file before adding the data
+
+Requirements
+------------
+None
+
+Parameters
+----------
+file_name: str
+    Name of file in the current directory to use
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_a22b868161410a8b43158691e976929c3}\label{class_file_1_1_file_a22b868161410a8b43158691e976929c3} 
+\index{File.File@{File.File}!run\_method@{run\_method}}
+\index{run\_method@{run\_method}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{run\_method()}{run\_method()}}
+{\footnotesize\ttfamily File.\+File.\+run\+\_\+method (\begin{DoxyParamCaption}\item[{}]{arguments }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Used to run any method in the class to easily access methods in an sbatch file
+
+Requirements
+------------
+None
+
+Parameters
+----------
+arguments: list
+    List of methods to execute
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_file_1_1_file_aa8e1e38a64036be73eeba95234ecb766}\label{class_file_1_1_file_aa8e1e38a64036be73eeba95234ecb766} 
+\index{File.File@{File.File}!write\_data\_to\_file@{write\_data\_to\_file}}
+\index{write\_data\_to\_file@{write\_data\_to\_file}!File.File@{File.File}}
+\doxysubsubsection{\texorpdfstring{write\_data\_to\_file()}{write\_data\_to\_file()}}
+{\footnotesize\ttfamily File.\+File.\+write\+\_\+data\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{}]{file\+\_\+name,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Writes each item in a given list to the given json file
+
+Requirements
+------------
+None
+
+Parameters
+----------
+file_name: str
+    Name of file in the current directory to use
+data:
+    List of data to be written to json file
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+File.\+py\end{DoxyCompactItemize}

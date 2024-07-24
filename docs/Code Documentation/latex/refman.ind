@@ -1,0 +1,171 @@
+\begin{theindex}
+
+  \item {\_\_init\_\_}
+    \subitem {DataBase.DataBase}, \hyperpage{8}
+    \subitem {Download.Download}, \hyperpage{9}
+    \subitem {SlurmJob.SlurmJob}, \hyperpage{20}
+
+  \indexspace
+
+  \item {add\_author}
+    \subitem {Download.Download}, \hyperpage{10}
+  \item {add\_work}
+    \subitem {Download.Download}, \hyperpage{10}
+  \item {Author.Author}, \hyperpage{3}
+    \subitem {check\_no\_lost\_collabs}, \hyperpage{4}
+    \subitem {get\_max\_batch\_number}, \hyperpage{4}
+    \subitem {remove\_duplicate\_authors\_and\_collabs}, \hyperpage{4}
+    \subitem {run\_method}, \hyperpage{5}
+    \subitem {test\_no\_duplicates\_in\_author\_and\_collab}, 
+		\hyperpage{5}
+    \subitem {upload\_collabs\_parallel}, \hyperpage{5}
+    \subitem {upload\_current\_gt\_authors}, \hyperpage{6}
+
+  \indexspace
+
+  \item {check\_files}
+    \subitem {File.File}, \hyperpage{13}
+  \item {check\_for\_duplicates}
+    \subitem {File.File}, \hyperpage{13}
+  \item {check\_no\_lost\_collabs}
+    \subitem {Author.Author}, \hyperpage{4}
+  \item {check\_num\_in\_json}
+    \subitem {File.File}, \hyperpage{14}
+  \item {chunk\_json}
+    \subitem {File.File}, \hyperpage{14}
+  \item {close\_file}
+    \subitem {File.File}, \hyperpage{14}
+  \item {close\_files}
+    \subitem {Download.Download}, \hyperpage{10}
+  \item {compare\_to\_edit}
+    \subitem {File.File}, \hyperpage{15}
+  \item {create\_authored\_relationship}
+    \subitem {Work.Work}, \hyperpage{24}
+  \item {create\_files}
+    \subitem {Download.Download}, \hyperpage{11}
+  \item {create\_json\_file}
+    \subitem {File.File}, \hyperpage{15}
+
+  \indexspace
+
+  \item {DataBase.DataBase}, \hyperpage{7}
+    \subitem {\_\_init\_\_}, \hyperpage{8}
+    \subitem {run\_command}, \hyperpage{8}
+  \item {Download.Download}, \hyperpage{9}
+    \subitem {\_\_init\_\_}, \hyperpage{9}
+    \subitem {add\_author}, \hyperpage{10}
+    \subitem {add\_work}, \hyperpage{10}
+    \subitem {close\_files}, \hyperpage{10}
+    \subitem {create\_files}, \hyperpage{11}
+    \subitem {download\_based\_on\_last\_known}, \hyperpage{11}
+    \subitem {download\_based\_on\_works}, \hyperpage{11}
+  \item {download\_based\_on\_last\_known}
+    \subitem {Download.Download}, \hyperpage{11}
+  \item {download\_based\_on\_works}
+    \subitem {Download.Download}, \hyperpage{11}
+  \item {download\_files}
+    \subitem {SlurmJob.SlurmJob}, \hyperpage{21}
+
+  \indexspace
+
+  \item {File.File}, \hyperpage{12}
+    \subitem {check\_files}, \hyperpage{13}
+    \subitem {check\_for\_duplicates}, \hyperpage{13}
+    \subitem {check\_num\_in\_json}, \hyperpage{14}
+    \subitem {chunk\_json}, \hyperpage{14}
+    \subitem {close\_file}, \hyperpage{14}
+    \subitem {compare\_to\_edit}, \hyperpage{15}
+    \subitem {create\_json\_file}, \hyperpage{15}
+    \subitem {get\_max\_batch\_number\_collabs}, \hyperpage{15}
+    \subitem {get\_max\_batch\_number\_works}, \hyperpage{16}
+    \subitem {open\_file}, \hyperpage{16}
+    \subitem {run\_method}, \hyperpage{16}
+    \subitem {write\_data\_to\_file}, \hyperpage{17}
+
+  \indexspace
+
+  \item {get\_max\_batch\_number}
+    \subitem {Author.Author}, \hyperpage{4}
+    \subitem {Work.Work}, \hyperpage{24}
+  \item {get\_max\_batch\_number\_collabs}
+    \subitem {File.File}, \hyperpage{15}
+  \item {get\_max\_batch\_number\_works}
+    \subitem {File.File}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Institution.Institution}, \hyperpage{17}
+    \subitem {remove\_duplicate\_institutions}, \hyperpage{18}
+    \subitem {run\_method}, \hyperpage{18}
+    \subitem {upload\_institutions}, \hyperpage{18}
+
+  \indexspace
+
+  \item {open\_file}
+    \subitem {File.File}, \hyperpage{16}
+
+  \indexspace
+
+  \item {print\_nums\_in\_file}
+    \subitem {SlurmJob.SlurmJob}, \hyperpage{21}
+
+  \indexspace
+
+  \item {remove\_duplicate\_authors\_and\_collabs}
+    \subitem {Author.Author}, \hyperpage{4}
+  \item {remove\_duplicate\_institutions}
+    \subitem {Institution.Institution}, \hyperpage{18}
+  \item {remove\_duplicate\_works}
+    \subitem {Work.Work}, \hyperpage{25}
+  \item {remove\_duplicates}
+    \subitem {SlurmJob.SlurmJob}, \hyperpage{21}
+  \item {run\_command}
+    \subitem {DataBase.DataBase}, \hyperpage{8}
+  \item {run\_method}
+    \subitem {Author.Author}, \hyperpage{5}
+    \subitem {File.File}, \hyperpage{16}
+    \subitem {Institution.Institution}, \hyperpage{18}
+    \subitem {Work.Work}, \hyperpage{25}
+  \item {run\_tests\_on\_cleaning}
+    \subitem {SlurmJob.SlurmJob}, \hyperpage{22}
+
+  \indexspace
+
+  \item {SlurmJob.SlurmJob}, \hyperpage{19}
+    \subitem {\_\_init\_\_}, \hyperpage{20}
+    \subitem {download\_files}, \hyperpage{21}
+    \subitem {print\_nums\_in\_file}, \hyperpage{21}
+    \subitem {remove\_duplicates}, \hyperpage{21}
+    \subitem {run\_tests\_on\_cleaning}, \hyperpage{22}
+    \subitem {upload\_to\_neo4j}, \hyperpage{22}
+
+  \indexspace
+
+  \item {test\_no\_duplicates\_in\_author\_and\_collab}
+    \subitem {Author.Author}, \hyperpage{5}
+
+  \indexspace
+
+  \item {upload\_collabs\_parallel}
+    \subitem {Author.Author}, \hyperpage{5}
+  \item {upload\_current\_gt\_authors}
+    \subitem {Author.Author}, \hyperpage{6}
+  \item {upload\_institutions}
+    \subitem {Institution.Institution}, \hyperpage{18}
+  \item {upload\_to\_neo4j}
+    \subitem {SlurmJob.SlurmJob}, \hyperpage{22}
+  \item {upload\_works\_parallel}
+    \subitem {Work.Work}, \hyperpage{25}
+
+  \indexspace
+
+  \item {Work.Work}, \hyperpage{23}
+    \subitem {create\_authored\_relationship}, \hyperpage{24}
+    \subitem {get\_max\_batch\_number}, \hyperpage{24}
+    \subitem {remove\_duplicate\_works}, \hyperpage{25}
+    \subitem {run\_method}, \hyperpage{25}
+    \subitem {upload\_works\_parallel}, \hyperpage{25}
+  \item {write\_data\_to\_file}
+    \subitem {File.File}, \hyperpage{17}
+
+\end{theindex}

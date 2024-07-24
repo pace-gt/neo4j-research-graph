@@ -1,0 +1,175 @@
+\doxysection{Work.\+Work Class Reference}
+\hypertarget{class_work_1_1_work}{}\label{class_work_1_1_work}\index{Work.Work@{Work.Work}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_work_1_1_work_a0d95a3bf367a68d2b75df4e5ecc93b5d}{remove\+\_\+duplicate\+\_\+works}} ()
+\item 
+\mbox{\hyperlink{class_work_1_1_work_afbcc75e932cd3d78e6ac20d5a796945d}{upload\+\_\+works\+\_\+parallel}} (batch\+\_\+number, url, username, password, database, batch\+\_\+size=8000)
+\item 
+\mbox{\hyperlink{class_work_1_1_work_aff67d93722c03f6dd69b7821d3537c3d}{get\+\_\+max\+\_\+batch\+\_\+number}} (batch\+\_\+size=8000)
+\item 
+\mbox{\hyperlink{class_work_1_1_work_a57982851837b053a59b33b930ded4dbe}{create\+\_\+authored\+\_\+relationship}} (url, username, password, database)
+\item 
+\mbox{\hyperlink{class_work_1_1_work_a9076ad8c2ee53d78b3fe981db1b43833}{run\+\_\+method}} (arguments)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class to hold various methods relating to works
+
+Imports
+-------
+Uses the File and Database classes from this project
+json
+sys
+
+Methods
+-------
+remove_duplicate_works():
+    Removes duplicate works and creates a new json file without the duplicates
+upload_works_parallel(batch_number, url, username, password, database, batch_size=8000):
+    Uploads works within the work json file, set up to make use of a slurm array job
+get_max_batch_number(batch_size=8000):
+    Prints the length of the array used when uploading the works in parallel
+    Use to determing correct size of array for an array job
+    Prints the result to output file
+create_authored_relationship(url, username, password, database):
+    Creates the authored relationship within the database
+run_medthod(arguments):
+    Used to run any method in the class to easily access methods in an sbatch file
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_work_1_1_work_a57982851837b053a59b33b930ded4dbe}\label{class_work_1_1_work_a57982851837b053a59b33b930ded4dbe} 
+\index{Work.Work@{Work.Work}!create\_authored\_relationship@{create\_authored\_relationship}}
+\index{create\_authored\_relationship@{create\_authored\_relationship}!Work.Work@{Work.Work}}
+\doxysubsubsection{\texorpdfstring{create\_authored\_relationship()}{create\_authored\_relationship()}}
+{\footnotesize\ttfamily Work.\+Work.\+create\+\_\+authored\+\_\+relationship (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{}]{username,  }\item[{}]{password,  }\item[{}]{database }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Creates the authored relationship within the database
+
+Requirements
+------------
+None
+
+Parameters
+----------
+url: str
+    URL of the database to connect and upload the nodes to
+username: str
+    Username of Neo4j user
+password: str
+    Password of Neo4j user
+database: str
+    Specific database to upload to
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_work_1_1_work_aff67d93722c03f6dd69b7821d3537c3d}\label{class_work_1_1_work_aff67d93722c03f6dd69b7821d3537c3d} 
+\index{Work.Work@{Work.Work}!get\_max\_batch\_number@{get\_max\_batch\_number}}
+\index{get\_max\_batch\_number@{get\_max\_batch\_number}!Work.Work@{Work.Work}}
+\doxysubsubsection{\texorpdfstring{get\_max\_batch\_number()}{get\_max\_batch\_number()}}
+{\footnotesize\ttfamily Work.\+Work.\+get\+\_\+max\+\_\+batch\+\_\+number (\begin{DoxyParamCaption}\item[{}]{batch\+\_\+size = {\ttfamily 8000} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints the length of the array used when uploading the works in parallel
+Use to determine correct size of array for an array job
+Prints the result to output file
+
+Requirements
+------------
+openalex_work_dump_edit.json
+
+Parameters
+----------
+batch_size: int (optional)
+    Represents the size of each batch, the number of nodes to be uploaded in each sub-job
+    If the size is too large, Neo4j will run out of memory and the upload will not complete
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_work_1_1_work_a0d95a3bf367a68d2b75df4e5ecc93b5d}\label{class_work_1_1_work_a0d95a3bf367a68d2b75df4e5ecc93b5d} 
+\index{Work.Work@{Work.Work}!remove\_duplicate\_works@{remove\_duplicate\_works}}
+\index{remove\_duplicate\_works@{remove\_duplicate\_works}!Work.Work@{Work.Work}}
+\doxysubsubsection{\texorpdfstring{remove\_duplicate\_works()}{remove\_duplicate\_works()}}
+{\footnotesize\ttfamily Work.\+Work.\+remove\+\_\+duplicate\+\_\+works (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Removes duplicate works and creates a new json file without the duplicates
+
+Requirements
+------------
+openalex_work_dump.json
+
+Parameters
+----------
+None
+
+Returns
+-------
+None\end{DoxyVerb}
+ \Hypertarget{class_work_1_1_work_a9076ad8c2ee53d78b3fe981db1b43833}\label{class_work_1_1_work_a9076ad8c2ee53d78b3fe981db1b43833} 
+\index{Work.Work@{Work.Work}!run\_method@{run\_method}}
+\index{run\_method@{run\_method}!Work.Work@{Work.Work}}
+\doxysubsubsection{\texorpdfstring{run\_method()}{run\_method()}}
+{\footnotesize\ttfamily Work.\+Work.\+run\+\_\+method (\begin{DoxyParamCaption}\item[{}]{arguments }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Used to run any method in the class to easily access methods in an sbatch file
+
+Requirements
+------------
+None
+
+Parameters
+----------
+arguments: list
+    List of methods to execute
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_work_1_1_work_afbcc75e932cd3d78e6ac20d5a796945d}\label{class_work_1_1_work_afbcc75e932cd3d78e6ac20d5a796945d} 
+\index{Work.Work@{Work.Work}!upload\_works\_parallel@{upload\_works\_parallel}}
+\index{upload\_works\_parallel@{upload\_works\_parallel}!Work.Work@{Work.Work}}
+\doxysubsubsection{\texorpdfstring{upload\_works\_parallel()}{upload\_works\_parallel()}}
+{\footnotesize\ttfamily Work.\+Work.\+upload\+\_\+works\+\_\+parallel (\begin{DoxyParamCaption}\item[{}]{batch\+\_\+number,  }\item[{}]{url,  }\item[{}]{username,  }\item[{}]{password,  }\item[{}]{database,  }\item[{}]{batch\+\_\+size = {\ttfamily 8000} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Uploads works within the work json file, set up to make use of a slurm array job
+
+Requirements
+------------
+openalex_work_dump_edit.json
+
+Parameters
+----------
+batch_number: int
+    Represents which batch to upload, based on batch_size
+    with the default number for batch_size (8000): 
+    A batch number of 0 uploads the first 8000, 1 the next 8000, etc 
+url: str
+    URL of the database to connect and upload the nodes to
+username: str
+    Username of Neo4j user
+password: str
+    Password of Neo4j user
+database: str
+    Specific database to upload to
+batch_size: int (optional)
+    Represents the size of each batch, the number of nodes to be uploaded in each sub-job
+    If the size is too large, Neo4j will run out of memory and the upload will not complete
+    Default value: 8000
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Work.\+py\end{DoxyCompactItemize}

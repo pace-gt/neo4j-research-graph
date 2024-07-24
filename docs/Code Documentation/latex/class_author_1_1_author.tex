@@ -1,0 +1,244 @@
+\doxysection{Author.\+Author Class Reference}
+\hypertarget{class_author_1_1_author}{}\label{class_author_1_1_author}\index{Author.Author@{Author.Author}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_author_1_1_author_aaf2592b07a6b601a495547b30653dbce}{remove\+\_\+duplicate\+\_\+authors\+\_\+and\+\_\+collabs}} ()
+\item 
+\mbox{\hyperlink{class_author_1_1_author_a125ca309eae2eedfdecc41ed4d98a04e}{upload\+\_\+current\+\_\+gt\+\_\+authors}} (url, username, password, database)
+\item 
+\mbox{\hyperlink{class_author_1_1_author_a41be66c118e5f1233c7e23560e2795e5}{upload\+\_\+collabs\+\_\+parallel}} (batch\+\_\+number, url, username, password, database, batch\+\_\+size=8000)
+\item 
+\mbox{\hyperlink{class_author_1_1_author_ab1081c035e891b1ab2ce93f14c3ad55d}{get\+\_\+max\+\_\+batch\+\_\+number}} (batch\+\_\+size=8000)
+\item 
+\mbox{\hyperlink{class_author_1_1_author_a000724fe9b81e3e8ba62cf4de6e91974}{test\+\_\+no\+\_\+duplicates\+\_\+in\+\_\+author\+\_\+and\+\_\+collab}} ()
+\item 
+\mbox{\hyperlink{class_author_1_1_author_a8aa5785de702f8cc1cdffc88d50ecdc2}{check\+\_\+no\+\_\+lost\+\_\+collabs}} ()
+\item 
+\mbox{\hyperlink{class_author_1_1_author_ae0e3f51a2aa92043a9932219c9b5ef44}{run\+\_\+method}} (arguments)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class to hold various methods relating to authors.
+
+Imports
+-------
+Uses the File and Database classes from this project
+json
+sys
+
+Methods
+-------
+remove_duplicate_authors_and_collabs():
+    Removes any duplicated authors and collaborators from the author and collab json files
+    Merges authors which appear in both files so that only one node will be created
+upload_current_gt_authors(url, username, password, database):
+    Uploads authors within the author json file
+upload_collabs_parallel(batch_number, url, username, password, database, batch_size=8000):
+    Uploads collabs within the collab json file, set up to make use of a slurm array job
+get_max_batch_number(batch_size=8000):
+    Prints the length of the array used when uploading the collabs in parallel
+    Use to determing correct size of array for an array job
+    Prints the result to output file
+test_no_duplicates_in_author_and_collab():
+    A test to determine if there are any authors which appear both as an author and a collab,
+    meaning they were not propery merged
+    Prints the result to output file
+check_no_lost_collabs():
+    A test to determine if every collab in the original collab json is also in the edited version
+    Prints the result to output file
+run_method(arguments):
+    Used to run any method in the class to easily access methods in an sbatch file
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_author_1_1_author_a8aa5785de702f8cc1cdffc88d50ecdc2}\label{class_author_1_1_author_a8aa5785de702f8cc1cdffc88d50ecdc2} 
+\index{Author.Author@{Author.Author}!check\_no\_lost\_collabs@{check\_no\_lost\_collabs}}
+\index{check\_no\_lost\_collabs@{check\_no\_lost\_collabs}!Author.Author@{Author.Author}}
+\doxysubsubsection{\texorpdfstring{check\_no\_lost\_collabs()}{check\_no\_lost\_collabs()}}
+{\footnotesize\ttfamily Author.\+Author.\+check\+\_\+no\+\_\+lost\+\_\+collabs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A test to determine if every collab in the original collab json is also in the edited version
+Prints the result to output file
+
+Requirements
+------------
+openalex_collab_dump.json
+openalex_collab_dump_edit.json
+
+Parameters
+----------
+None
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_author_1_1_author_ab1081c035e891b1ab2ce93f14c3ad55d}\label{class_author_1_1_author_ab1081c035e891b1ab2ce93f14c3ad55d} 
+\index{Author.Author@{Author.Author}!get\_max\_batch\_number@{get\_max\_batch\_number}}
+\index{get\_max\_batch\_number@{get\_max\_batch\_number}!Author.Author@{Author.Author}}
+\doxysubsubsection{\texorpdfstring{get\_max\_batch\_number()}{get\_max\_batch\_number()}}
+{\footnotesize\ttfamily Author.\+Author.\+get\+\_\+max\+\_\+batch\+\_\+number (\begin{DoxyParamCaption}\item[{}]{batch\+\_\+size = {\ttfamily 8000} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Prints the length of the array used when uploading the collabs in parallel
+Use to determine correct size of array for an array job
+Prints the result to output file
+
+Requirements
+------------
+openalex_collab_dump_edit.json
+
+Parameters
+----------
+batch_size: int (optional)
+    Represents the size of each batch, the number of nodes to be uploaded in each sub-job
+    If the size is too large, Neo4j will run out of memory and the upload will not complete
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_author_1_1_author_aaf2592b07a6b601a495547b30653dbce}\label{class_author_1_1_author_aaf2592b07a6b601a495547b30653dbce} 
+\index{Author.Author@{Author.Author}!remove\_duplicate\_authors\_and\_collabs@{remove\_duplicate\_authors\_and\_collabs}}
+\index{remove\_duplicate\_authors\_and\_collabs@{remove\_duplicate\_authors\_and\_collabs}!Author.Author@{Author.Author}}
+\doxysubsubsection{\texorpdfstring{remove\_duplicate\_authors\_and\_collabs()}{remove\_duplicate\_authors\_and\_collabs()}}
+{\footnotesize\ttfamily Author.\+Author.\+remove\+\_\+duplicate\+\_\+authors\+\_\+and\+\_\+collabs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Removes any duplicated authors and collaborators from the author and collab json files
+Merges authors which appear in both files so that only one node will be created
+When merging nodes, combines the past institution lists to capture all institutions an author
+worked at
+Does not include GT in a current GT author's past institutions, as this will be represented
+through a WORKING_AT relationship
+
+Requirements
+------------
+openalex_author_dump.json
+openalex_collab_dump.json
+openalex_work_dump.json
+openalex_institution_dump.json
+
+Parameters
+----------
+None
+
+Returns
+-------
+None\end{DoxyVerb}
+ \Hypertarget{class_author_1_1_author_ae0e3f51a2aa92043a9932219c9b5ef44}\label{class_author_1_1_author_ae0e3f51a2aa92043a9932219c9b5ef44} 
+\index{Author.Author@{Author.Author}!run\_method@{run\_method}}
+\index{run\_method@{run\_method}!Author.Author@{Author.Author}}
+\doxysubsubsection{\texorpdfstring{run\_method()}{run\_method()}}
+{\footnotesize\ttfamily Author.\+Author.\+run\+\_\+method (\begin{DoxyParamCaption}\item[{}]{arguments }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Used to run any method in the class to easily access methods in an sbatch file
+
+Requirements
+------------
+None
+
+Parameters
+----------
+arguments: list
+    List of methods to execute
+    ex. ['Author.check_no_lost_collabs()']
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_author_1_1_author_a000724fe9b81e3e8ba62cf4de6e91974}\label{class_author_1_1_author_a000724fe9b81e3e8ba62cf4de6e91974} 
+\index{Author.Author@{Author.Author}!test\_no\_duplicates\_in\_author\_and\_collab@{test\_no\_duplicates\_in\_author\_and\_collab}}
+\index{test\_no\_duplicates\_in\_author\_and\_collab@{test\_no\_duplicates\_in\_author\_and\_collab}!Author.Author@{Author.Author}}
+\doxysubsubsection{\texorpdfstring{test\_no\_duplicates\_in\_author\_and\_collab()}{test\_no\_duplicates\_in\_author\_and\_collab()}}
+{\footnotesize\ttfamily Author.\+Author.\+test\+\_\+no\+\_\+duplicates\+\_\+in\+\_\+author\+\_\+and\+\_\+collab (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}A test to determine if there are any authors which appear both as an author and a collab,
+meaning they were not propery merged
+Prints the result to output file
+
+Requirements
+------------
+openalex_author_dump_edit.json
+openalex_collab_dump_edit.json
+
+Parameters
+----------
+None
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_author_1_1_author_a41be66c118e5f1233c7e23560e2795e5}\label{class_author_1_1_author_a41be66c118e5f1233c7e23560e2795e5} 
+\index{Author.Author@{Author.Author}!upload\_collabs\_parallel@{upload\_collabs\_parallel}}
+\index{upload\_collabs\_parallel@{upload\_collabs\_parallel}!Author.Author@{Author.Author}}
+\doxysubsubsection{\texorpdfstring{upload\_collabs\_parallel()}{upload\_collabs\_parallel()}}
+{\footnotesize\ttfamily Author.\+Author.\+upload\+\_\+collabs\+\_\+parallel (\begin{DoxyParamCaption}\item[{}]{batch\+\_\+number,  }\item[{}]{url,  }\item[{}]{username,  }\item[{}]{password,  }\item[{}]{database,  }\item[{}]{batch\+\_\+size = {\ttfamily 8000} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Uploads collabs within the collab json file, set up to make use of a slurm array job
+Adds the WORKED_AT relationship with past institutions
+
+Requirements
+------------
+openalex_collab_dump_edit.json
+
+Parameters
+----------
+batch_number: int
+    Represents which batch to upload, based on batch_size
+    with the default number for batch_size (8000): 
+    A batch number of 0 uploads the first 8000, 1 the next 8000, etc 
+url: str
+    URL of the database to connect and upload the nodes to
+username: str
+    Username of Neo4j user
+password: str
+    Password of Neo4j user
+database: str
+    Specific database to upload to
+batch_size: int (optional)
+    Represents the size of each batch, the number of nodes to be uploaded in each sub-job
+    If the size is too large, Neo4j will run out of memory and the upload will not complete
+    Default value: 8000
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_author_1_1_author_a125ca309eae2eedfdecc41ed4d98a04e}\label{class_author_1_1_author_a125ca309eae2eedfdecc41ed4d98a04e} 
+\index{Author.Author@{Author.Author}!upload\_current\_gt\_authors@{upload\_current\_gt\_authors}}
+\index{upload\_current\_gt\_authors@{upload\_current\_gt\_authors}!Author.Author@{Author.Author}}
+\doxysubsubsection{\texorpdfstring{upload\_current\_gt\_authors()}{upload\_current\_gt\_authors()}}
+{\footnotesize\ttfamily Author.\+Author.\+upload\+\_\+current\+\_\+gt\+\_\+authors (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{}]{username,  }\item[{}]{password,  }\item[{}]{database }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Uploads authors within the author json file
+Gives all current gt authors both the Author and GT label
+Creates a WORKING_AT relationship with GT
+
+Requirements
+------------
+openalex_author_dump_edit.json
+
+Parameters
+----------
+url: str
+    URL of the database to connect and upload the nodes to
+username: str
+    Username of Neo4j user
+password: str
+    Password of Neo4j user
+database: str
+    Specific database to upload to
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Author.\+py\end{DoxyCompactItemize}

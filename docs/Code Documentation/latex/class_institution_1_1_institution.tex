@@ -1,0 +1,106 @@
+\doxysection{Institution.\+Institution Class Reference}
+\hypertarget{class_institution_1_1_institution}{}\label{class_institution_1_1_institution}\index{Institution.Institution@{Institution.Institution}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_institution_1_1_institution_ad38b7c8069506bad11f867a54e068a8a}{remove\+\_\+duplicate\+\_\+institutions}} ()
+\item 
+\mbox{\hyperlink{class_institution_1_1_institution_adad5359ba23cef28ea1a34e8d0fe39a9}{upload\+\_\+institutions}} (url, username, password, database)
+\item 
+\mbox{\hyperlink{class_institution_1_1_institution_a0264beba92d88c36d7ed6e2050840cc5}{run\+\_\+method}} (arguments)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class to hold various methods relating to institutions
+
+Imports
+-------
+Uses the File and Database classes from this project
+json
+sys
+
+Methods
+-------
+remove_duplicate_institutions():
+    Removes duplicate institutions and creates a new json file without the duplicates
+upload_institutions(url, username, password, database):
+    Uploads institutions within the json file
+run_medthod(arguments):
+    Used to run any method in the class to easily access methods in an sbatch file
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_institution_1_1_institution_ad38b7c8069506bad11f867a54e068a8a}\label{class_institution_1_1_institution_ad38b7c8069506bad11f867a54e068a8a} 
+\index{Institution.Institution@{Institution.Institution}!remove\_duplicate\_institutions@{remove\_duplicate\_institutions}}
+\index{remove\_duplicate\_institutions@{remove\_duplicate\_institutions}!Institution.Institution@{Institution.Institution}}
+\doxysubsubsection{\texorpdfstring{remove\_duplicate\_institutions()}{remove\_duplicate\_institutions()}}
+{\footnotesize\ttfamily Institution.\+Institution.\+remove\+\_\+duplicate\+\_\+institutions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Removes duplicate institutions and creates a new json file without the duplicates
+
+Requirements
+------------
+openalex_institution_dump.json
+
+Parameters
+----------
+None
+
+Returns
+-------
+None\end{DoxyVerb}
+ \Hypertarget{class_institution_1_1_institution_a0264beba92d88c36d7ed6e2050840cc5}\label{class_institution_1_1_institution_a0264beba92d88c36d7ed6e2050840cc5} 
+\index{Institution.Institution@{Institution.Institution}!run\_method@{run\_method}}
+\index{run\_method@{run\_method}!Institution.Institution@{Institution.Institution}}
+\doxysubsubsection{\texorpdfstring{run\_method()}{run\_method()}}
+{\footnotesize\ttfamily Institution.\+Institution.\+run\+\_\+method (\begin{DoxyParamCaption}\item[{}]{arguments }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Used to run any method in the class to easily access methods in an sbatch file
+
+Requirements
+------------
+None
+
+Parameters
+----------
+arguments: list
+    List of methods to execute
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ \Hypertarget{class_institution_1_1_institution_adad5359ba23cef28ea1a34e8d0fe39a9}\label{class_institution_1_1_institution_adad5359ba23cef28ea1a34e8d0fe39a9} 
+\index{Institution.Institution@{Institution.Institution}!upload\_institutions@{upload\_institutions}}
+\index{upload\_institutions@{upload\_institutions}!Institution.Institution@{Institution.Institution}}
+\doxysubsubsection{\texorpdfstring{upload\_institutions()}{upload\_institutions()}}
+{\footnotesize\ttfamily Institution.\+Institution.\+upload\+\_\+institutions (\begin{DoxyParamCaption}\item[{}]{url,  }\item[{}]{username,  }\item[{}]{password,  }\item[{}]{database }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb} Uploads institutions within the json file
+
+Requirements
+------------
+openalex_institution_dump_edit.json
+
+Parameters
+----------
+url: str
+    URL of the database to connect and upload the nodes to
+username: str
+    Username of Neo4j user
+password: str
+    Password of Neo4j user
+database: str
+    Specific database to upload to
+
+Returns
+-------
+None
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Institution.\+py\end{DoxyCompactItemize}
