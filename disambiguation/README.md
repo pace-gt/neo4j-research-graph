@@ -20,15 +20,15 @@ Creates 2 csv files: the OA_DOI file, and the Scopus_DOI_explode file. Connects 
 2. populate_orcids.py
 Creates 2 files: DOI_Match.csv matches DOIs from the database to DOIs from SCOPUS. DOI_LastName_Match.csv then matches authors from Scopus and OpenAlex who both share a DOI and a last name. These authors can be reasonable assumed to be the same person, and if Scopus contains an ORCID then that ID is new to the database. It also prints the number of new ORCID IDs.
 The procedure of these 2 files is shown in the following diagram:
-<img width="1184" alt="Disambig Diagram" src="https://github.gatech.edu/storage/user/59425/files/72baa2cf-74b1-42b1-8bc9-1a85fb4e560b">
+<img width="1184" alt="Disambig Diagram" src="images/scopus.png">
 3. populate_gt_info.py uses the ORCID_EXPORT_6_14_2023.csv and matches ORCID IDs to ones already in the database to update nodes with their Georgia Tech information. Requires the ORCID_EXPORT_6_14_2023.csv file from the library.
 The procedure of this file is shown in the following diagram:
-<img width="716" alt="Disambig Diagram 2" src="https://github.gatech.edu/storage/user/59425/files/22e04173-642a-4811-925d-ee6d8c8ac008">
+<img width="716" alt="Disambig Diagram 2" src="images/gt_info.png">
 With these 2 processes combined, you can locate new ORCIDs from Scopus and add GT data to the authors.
 
 ## LDAP Disambiguation
 The LDAP folder contains information regarding disambiguation using LDAP
-<img width="955" alt="LDAP Diagram" src="https://github.gatech.edu/storage/user/59425/files/f4a4484a-3788-4230-b0fb-5f43a31ad6ec">
+<img width="955" alt="LDAP Diagram" src="images/ldap.png">
 
 ## This folder contains 2 sbatch scripts <br>
 1. download_dois.sbatch runs author_doi.py
